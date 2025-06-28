@@ -29,5 +29,14 @@ A full-stack e-commerce application with Node.js backend and vanilla JavaScript 
    cd frontend
    npm start
 
+Generate a key:
+   $ node -e "console.log(require('crypto').randomBytes(32).toString('hex'))"
+
+add in .env
+JWT_SECRET=<TOKEN>
+JWT_EXPIRES_IN=7d
+
+
+
    cd backend
    node server.js
