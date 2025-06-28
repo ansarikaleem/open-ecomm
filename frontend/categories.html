@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manage Categories - Open E-Commerce</title>
+  <link rel="stylesheet" href="../css/admin.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1><a href="../index.html">Open E-Commerce</a></h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Dashboard</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="categories.html" class="active">Categories</a></li>
+          <li><a href="#" id="logout-link">Logout</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="admin-form">
+      <h2 id="category-form-title">Add New Category</h2>
+      <form id="category-form">
+        <input type="hidden" id="category-id">
+        <div class="form-group">
+          <label for="category-name">Name</label>
+          <input type="text" id="category-name" name="name" required>
+        </div>
+        <div class="form-group">
+          <label for="category-description">Description</label>
+          <textarea id="category-description" name="description" rows="4"></textarea>
+        </div>
+        <button type="submit" class="btn" id="category-submit-btn">Add Category</button>
+      </form>
+    </section>
+
+    <section class="admin-table">
+      <h2>Category List</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="categories-table-body">
+          <!-- Categories will be loaded here via JavaScript -->
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <script src="../js/admin.js"></script>
+</body>
+</html>

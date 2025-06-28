@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Open E-Commerce</title>
+  <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1><a href="index.html">Open E-Commerce</a></h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="cart.html" id="cart-link">Cart (<span id="cart-count">0</span>)</a></li>
+          <li id="auth-links">
+            <a href="login.html" id="login-link">Login</a>
+            <a href="signup.html" id="signup-link">Signup</a>
+            <a href="#" id="logout-link" style="display: none;">Logout</a>
+          </li>
+          <li><a href="admin/index.html" id="admin-link" style="display: none;">Admin</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h2>Welcome to Open E-Commerce</h2>
+      <p>Shop the best products at the best prices</p>
+      <a href="products.html" class="btn">Browse Products</a>
+    </section>
+
+    <section class="featured-products">
+      <h2>Featured Products</h2>
+      <div class="product-grid" id="featured-products">
+        <!-- Products will be loaded here via JavaScript -->
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2023 Open E-Commerce. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="/js/main.js"></script>
+  <script src="/js/products.js"></script>
+</body>
+</html>
