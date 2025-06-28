@@ -1,0 +1,13 @@
+{
+  "name": "open-ecomm-frontend",
+  "version": "1.0.0",
+  "description": "Frontend for Open E-Commerce application",
+  "scripts": {
+    "start": "live-server --port=8080",
+    "dev": "live-server --port=8080",
+    "build": "echo 'Frontend build complete'"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  }
+}

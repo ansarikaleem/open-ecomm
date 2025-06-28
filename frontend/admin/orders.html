@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manage Orders - Open E-Commerce</title>
+  <link rel="stylesheet" href="../css/admin.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+  <div class="admin-container">
+    <aside class="sidebar">
+      <div class="logo">Open E-Commerce</div>
+      <nav>
+        <ul>
+          <li><a href="index.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+          <li><a href="products.html"><i class="fas fa-box-open"></i> Products</a></li>
+          <li><a href="categories.html"><i class="fas fa-list"></i> Categories</a></li>
+          <li><a href="orders.html" class="active"><i class="fas fa-shopping-cart"></i> Orders</a></li>
+          <li><a href="users.html"><i class="fas fa-users"></i> Users</a></li>
+          <li><a href="#" id="logout-link"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar">
+        <h1>Manage Orders</h1>
+        <div class="user-info">
+          <span id="admin-username">Admin User</span>
+          <img src="../images/admin-avatar.jpg" alt="Admin Avatar">
+        </div>
+      </header>
+
+      <div class="order-filters">
+        <div class="filter-group">
+          <label for="order-status-filter">Status:</label>
+          <select id="order-status-filter">
+            <option value="all">All Orders</option>
+            <option value="pending">Pending</option>
+            <option value="processing">Processing</option>
+            <option value="shipped">Shipped</option>
+            <option value="delivered">Delivered</option>
+            <option value="cancelled">Cancelled</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <label for="date-range-filter">Date Range:</label>
+          <select id="date-range-filter">
+            <option value="all">All Time</option>
+            <option value="today">Today</option>
+            <option value="week">This Week</option>
+            <option value="month">This Month</option>
+          </select>
+        </div>
+        <div class="search-box">
+          <input type="text" id="order-search" placeholder="Search orders...">
+          <button><i class="fas fa-search"></i></button>
+        </div>
+      </div>
+
+      <div class="order-table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Order ID</th>
+              <th>Customer</th>
+              <th>Date</th>
+              <th>Items</th>
+              <th>Total</th>
+              <th>Status</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="orders-table">
+            <!-- Orders will be loaded here via JavaScript -->
+          </tbody>
+        </table>
+      </div>
+    </main>
+  </div>
+
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/js/all.min.js" crossorigin="anonymous"></script> -->
+  <script src="../js/admin-orders.js"></script>
+</body>
+</html>
