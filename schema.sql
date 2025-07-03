@@ -1,5 +1,6 @@
 -- Database: open_ecomm
-
+CREATE DATABASE IF NOT EXISTS open_ecomm;
+USE open_ecomm;
 
 
 CREATE TABLE categories (

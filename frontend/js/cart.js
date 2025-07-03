@@ -146,7 +146,7 @@ async function updateCartItem(itemId, action) {
     
     if (token) {
       // User is logged in - update server cart
-      const response = await fetch(+BASE_URL`/api/v1/cart/${itemId}`, {
+      const response = await fetch(BASE_URL+`/api/v1/cart/${itemId}`, {
         method: 'PATCH',
         headers: {
           'Content-Type': 'application/json',
